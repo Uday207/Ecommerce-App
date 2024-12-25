@@ -2,12 +2,21 @@ import React, { useEffect, useRef } from 'react';
 import { Footer, Navbar, Product } from "../components";
 
 const Products = () => {
-  const componentMounted = useRef(true); // useRef to persist value across renders
+  const componentMounted = useRef(true); // Using useRef to persist value across renders
 
   useEffect(() => {
-    // You can now safely update componentMounted.current without issues
-    componentMounted.current = false; // Example update
-  }, []); // Empty dependency array means this will run once when the component mounts
+    // Your effect logic can go here
+    // For example:
+    if (componentMounted.current) {
+      // Safe to perform actions that should only happen once
+      console.log('Component mounted successfully!');
+    }
+
+    return () => {
+      // Cleanup when component unmounts
+      componentMounted.current = false;
+    };
+  }, []); // Empty dependency array ensures this effect runs only once
 
   return (
     <>
