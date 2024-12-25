@@ -2,21 +2,19 @@ import React, { useEffect, useRef } from 'react';
 import { Footer, Navbar, Product } from "../components";
 
 const Products = () => {
-  const componentMounted = useRef(true); // Using useRef to persist value across renders
+  const componentMounted = useRef(true); // Store the mounted status using useRef
 
   useEffect(() => {
-    // Your effect logic can go here
-    // For example:
     if (componentMounted.current) {
-      // Safe to perform actions that should only happen once
+      // Your logic here when the component is mounted
       console.log('Component mounted successfully!');
     }
 
     return () => {
-      // Cleanup when component unmounts
+      // Cleanup logic, set componentMounted to false on unmount
       componentMounted.current = false;
     };
-  }, []); // Empty dependency array ensures this effect runs only once
+  }, []); // Empty array means this runs only once on mount and cleanup on unmount
 
   return (
     <>
