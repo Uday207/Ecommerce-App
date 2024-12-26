@@ -1,4 +1,4 @@
-E-Commerce Website
+#E-Commerce Website
 A Ecommerce Website made with React.js Framework.
 
 Demo
@@ -12,17 +12,13 @@ App Screenshot
 
 Run Locally
 Clone the project
-
-  git clone https://github.com/Uday207/ecommerce-app
+git clone https://github.com/Uday207/ecommerce-app
 Go to the project directory
-
-  cd ecommerce-app
+cd ecommerce-app
 Install dependencies
-
-  npm install
+npm install
 Start the server
-
-  npm start
+npm start
 Tech Stack
 React
 Redux
