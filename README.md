@@ -1,4 +1,4 @@
-#E-Commerce Website
+E-Commerce Website
 A Ecommerce Website made with React.js Framework.
 
 Demo
