@@ -1,0 +1,15 @@
+[build]
+  # Directory where the build files are generated
+  publish = "build"
+  # Command to run for building the project
+  command = "npm run build"
+
+[build.environment]
+  # Disabling strict CI mode to avoid warnings as errors
+  CI = "false"
+
+[[redirects]]
+  # Redirect all requests to index.html for SPA (Single Page Application)
+  from = "/*"
+  to = "/index.html"
+  status = 200
